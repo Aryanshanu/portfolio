@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
       <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
-        Ganesh Goud
+        Ganesh Kumar
       </h1>
       <p className="text-xl md:text-2xl mb-8 text-gray-600 max-w-2xl">
         Data Scientist & AI Engineer
