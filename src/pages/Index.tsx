@@ -5,11 +5,13 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Education from "../components/Education";
 import Achievements from "../components/Achievements";
+import Navigation from "../components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <main className="container mx-auto">
+      <Navigation />
+      <main className="container mx-auto pt-16">
         <Hero />
         <About />
         <Experience />
