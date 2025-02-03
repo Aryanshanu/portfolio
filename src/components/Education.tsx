@@ -8,36 +8,37 @@ const Education = () => {
   ];
 
   return (
-    <section className="py-16 px-4" id="education">
+    <section className="py-16 px-4 bg-white" id="education">
       <div className="max-w-4xl mx-auto">
-        <h2 className="section-heading">Education & Certifications</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="card">
-            <h3 className="text-xl font-bold text-primary mb-4">Education</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-gray-700 font-semibold">
-                  Master's in Information Technology
-                  <br />
-                  <span className="text-gray-600">Osmania University</span>
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-700 font-semibold">
-                  Bachelor in Applied Science
-                  <br />
-                  <span className="text-gray-600">Osmania University</span>
-                </p>
-              </div>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">Education</h2>
+          <div className="space-y-6">
+            <div className="p-6 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <p className="text-xl font-semibold text-blue-900">
+                Master's in Information Technology
+              </p>
+              <p className="text-blue-700">Osmania University</p>
+            </div>
+            <div className="p-6 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <p className="text-xl font-semibold text-blue-900">
+                Bachelor in Applied Science
+              </p>
+              <p className="text-blue-700">Osmania University</p>
             </div>
           </div>
-          <div className="card">
-            <h3 className="text-xl font-bold text-primary mb-4">Certifications</h3>
-            <ul className="space-y-2">
-              {certifications.map((cert, index) => (
-                <li key={index} className="text-gray-700">{cert}</li>
-              ))}
-            </ul>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">Certifications</h2>
+          <div className="grid gap-4">
+            {certifications.map((cert, index) => (
+              <div 
+                key={index} 
+                className="p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <p className="text-blue-800">{cert}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
