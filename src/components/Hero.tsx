@@ -1,12 +1,16 @@
-import { GraduationCap, Briefcase, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
     <div className="min-h-[40vh] flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-blue-50 to-white">
       <div className="mb-8">
-        <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
-          <AvatarImage src="/lovable-uploads/124de249-6c27-4104-9d37-ba17a92de736.png" alt="Ganesh Kumar" />
+        <Avatar className="w-40 h-40 border-4 border-white shadow-lg overflow-hidden">
+          <AvatarImage 
+            src="/lovable-uploads/124de249-6c27-4104-9d37-ba17a92de736.png" 
+            alt="Ganesh Kumar"
+            className="object-cover object-center w-full h-full"
+          />
           <AvatarFallback>GK</AvatarFallback>
         </Avatar>
       </div>
