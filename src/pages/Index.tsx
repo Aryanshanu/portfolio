@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Experience from "../components/Experience";
@@ -6,21 +7,25 @@ import Projects from "../components/Projects";
 import Education from "../components/Education";
 import Achievements from "../components/Achievements";
 import Navigation from "../components/Navigation";
+import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <Navigation />
-      <main className="container mx-auto pt-16">
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Education />
-        <Achievements />
-      </main>
-    </div>
+    <ThemeProvider defaultTheme="system" enableSystem>
+      <div className="min-h-screen bg-background text-foreground">
+        <Navigation />
+        <main className="container mx-auto pt-16">
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Education />
+          <Achievements />
+          <ContactForm />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 };
 

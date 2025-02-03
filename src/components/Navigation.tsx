@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Github, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,8 @@ const Navigation = () => {
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Education", href: "#education" },
-    { label: "Achievements", href: "#achievements" }
+    { label: "Achievements", href: "#achievements" },
+    { label: "Contact", href: "#contact" }
   ];
 
   return (
@@ -32,8 +34,9 @@ const Navigation = () => {
               </a>
             ))}
             
-            {/* Social Links */}
+            {/* Social Links and Theme Toggle */}
             <div className="flex items-center space-x-4">
+              <ThemeToggle />
               <a
                 href="https://github.com/Aryanshanu"
                 target="_blank"
@@ -54,12 +57,14 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
