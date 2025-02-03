@@ -8,7 +8,7 @@ const Projects = () => {
       title: "NSE Stock Information Visualizations",
       description: "Created an interactive stock analysis tool leveraging NSE data for insights and trend visualizations.",
       link: "https://huggingface.co/spaces/Aryanshanu/NSE_Stock_Info_Visualizations",
-      image: "photo-1488590528505-98d2b5aba04b",
+      image: "/stock-analysis.jpg",
       github: "https://github.com/yourusername/nse-stock-viz",
       tech: ["Python", "Streamlit", "Pandas", "Plotly"]
     },
@@ -16,7 +16,7 @@ const Projects = () => {
       title: "Sentiment Analysis for Text Data",
       description: "Designed a web application for real-time sentiment analysis using pre-trained NLP models.",
       link: "https://huggingface.co/spaces/Aryanshanu/Sentiment_Analysis",
-      image: "photo-1486312338219-ce68d2c6f44d",
+      image: "/sentiment-analysis.jpg",
       github: "https://github.com/yourusername/sentiment-analysis",
       tech: ["PyTorch", "Transformers", "FastAPI", "React"]
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       title: "Reinforcement Learning with PPO",
       description: "Contributed to Hugging Face's RL environments by training and deploying PPO agents for dynamic tasks.",
       link: "https://huggingface.co/Aryanshanu/ppo-Huggy",
-      image: "photo-1487058792275-0ad4aaf24ca7",
+      image: "/reinforcement-learning.jpg",
       github: "https://github.com/yourusername/ppo-huggy",
       tech: ["Python", "PyTorch", "Stable-Baselines3", "Gym"]
     }
@@ -33,15 +33,19 @@ const Projects = () => {
   return (
     <section className="py-16 px-4" id="projects">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading text-center">Key Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <h2 className="section-heading text-center mb-12">Key Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 animate-fade-in">
               <CardHeader className="relative overflow-hidden h-48">
                 <img
-                  src={`https://source.unsplash.com/${project.image}`}
+                  src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = `https://source.unsplash.com/${['photo-1488590528505-98d2b5aba04b', 'photo-1486312338219-ce68d2c6f44d', 'photo-1487058792275-0ad4aaf24ca7'][index]}`;
+                  }}
                 />
               </CardHeader>
               <CardContent className="p-6">

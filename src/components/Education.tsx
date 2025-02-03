@@ -14,11 +14,22 @@ const Education = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="card">
             <h3 className="text-xl font-bold text-primary mb-4">Education</h3>
-            <p className="text-gray-700">
-              Bachelor in Applied Science
-              <br />
-              Osmania University
-            </p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-gray-700 font-semibold">
+                  Master's in Information Technology
+                  <br />
+                  <span className="text-gray-600">Osmania University</span>
+                </p>
+              </div>
+              <div>
+                <p className="text-gray-700 font-semibold">
+                  Bachelor in Applied Science
+                  <br />
+                  <span className="text-gray-600">Osmania University</span>
+                </p>
+              </div>
+            </div>
           </div>
           <div className="card">
             <h3 className="text-xl font-bold text-primary mb-4">Certifications</h3>
