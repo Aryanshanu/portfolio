@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, Star } from "lucide-react";
+import { ExternalLink, Github, Star, LineChart, TrendingUp, Database, Brain } from "lucide-react";
 import { useState } from "react";
 
 const Projects = () => {
@@ -9,16 +9,22 @@ const Projects = () => {
   const projects = [
     {
       title: "NSE Stock Information Visualizations",
-      description: "Advanced stock market analysis platform featuring real-time data visualization, technical indicators, and predictive analytics. Built with Python and modern data science libraries for institutional-grade market insights.",
+      description: "Enterprise-grade financial analytics platform leveraging advanced data visualization and machine learning for real-time stock market insights. Features include technical indicator analysis, predictive modeling, and interactive dashboards for institutional investors.",
       link: "https://huggingface.co/spaces/Aryanshanu/NSE_Stock_Info_Visualizations",
       image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200&h=800",
       github: "https://github.com/yourusername/nse-stock-viz",
       tech: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy", "scikit-learn"],
       highlights: [
-        "Real-time market data processing",
-        "Advanced technical analysis",
-        "Machine learning predictions",
-        "Interactive dashboards"
+        "Real-time market data processing with sub-second latency",
+        "Advanced technical analysis with 20+ indicators",
+        "ML-powered price prediction models",
+        "Interactive dashboards with drill-down capabilities"
+      ],
+      features: [
+        { icon: <LineChart className="w-5 h-5" />, text: "Real-time Technical Analysis" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "Predictive Analytics" },
+        { icon: <Database className="w-5 h-5" />, text: "Historical Data Analysis" },
+        { icon: <Brain className="w-5 h-5" />, text: "ML-Powered Insights" }
       ]
     },
     {
@@ -55,6 +61,7 @@ const Projects = () => {
                 group hover:shadow-xl transition-all duration-300 animate-fade-in 
                 transform hover:-translate-y-2 overflow-hidden
                 bg-card dark:bg-card text-card-foreground dark:text-card-foreground
+                border border-border dark:border-border
                 ${hoveredProject === index ? 'ring-2 ring-primary dark:ring-primary' : ''}
               `}
               onMouseEnter={() => setHoveredProject(index)}
@@ -70,7 +77,9 @@ const Projects = () => {
               </div>
               <CardContent className="p-6">
                 <CardTitle className="mb-2 text-xl text-foreground dark:text-foreground">{project.title}</CardTitle>
-                <CardDescription className="mb-4 text-muted-foreground dark:text-muted-foreground">{project.description}</CardDescription>
+                <CardDescription className="mb-4 text-muted-foreground dark:text-muted-foreground">
+                  {project.description}
+                </CardDescription>
                 
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -78,7 +87,7 @@ const Projects = () => {
                       <Badge 
                         key={i} 
                         variant="secondary" 
-                        className="bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground animate-slide-in-right" 
+                        className="bg-secondary/80 dark:bg-secondary/20 text-secondary-foreground dark:text-secondary-foreground animate-slide-in-right" 
                         style={{ animationDelay: `${i * 100}ms` }}
                       >
                         {tech}
@@ -86,6 +95,18 @@ const Projects = () => {
                     ))}
                   </div>
                   
+                  <div className="space-y-2">
+                    {project.features?.map((feature, i) => (
+                      <div 
+                        key={i} 
+                        className="flex items-center gap-2 text-sm text-muted-foreground dark:text-muted-foreground"
+                      >
+                        {feature.icon}
+                        <span>{feature.text}</span>
+                      </div>
+                    ))}
+                  </div>
+
                   <div className="space-y-2">
                     {project.highlights.map((highlight, i) => (
                       <div 

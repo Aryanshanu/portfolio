@@ -11,7 +11,7 @@ import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   return (
-    <ThemeProvider defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
         <main className="container mx-auto pt-16">

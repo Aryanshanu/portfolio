@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, Loader2 } from "lucide-react";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -19,7 +19,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/ganeshgoud0023@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -29,14 +29,16 @@ const ContactForm = () => {
 
       if (response.ok) {
         toast({
-          title: "Message sent successfully!",
+          title: "Message sent successfully! 🎉",
           description: "Thank you for reaching out. I'll get back to you soon.",
+          variant: "default"
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error sending message",
         description: "Please try again later or contact me directly via email.",
@@ -65,6 +67,7 @@ const ContactForm = () => {
                 }
                 required
                 className="bg-background dark:bg-background border-input dark:border-input"
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -77,6 +80,7 @@ const ContactForm = () => {
                 }
                 required
                 className="bg-background dark:bg-background border-input dark:border-input"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -89,6 +93,7 @@ const ContactForm = () => {
               }
               required
               className="min-h-[150px] bg-background dark:bg-background border-input dark:border-input"
+              disabled={isSubmitting}
             />
           </div>
           <Button 
@@ -96,8 +101,17 @@ const ContactForm = () => {
             className="w-full md:w-auto"
             disabled={isSubmitting}
           >
-            <Send className="mr-2 h-4 w-4" />
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="mr-2 h-4 w-4" />
+                Send Message
+              </>
+            )}
           </Button>
         </form>
       </div>
