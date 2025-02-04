@@ -26,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: pages-artifact
+          name: pages-artifact   # This is the artifact’s name
           path: ./docs
 
   deploy:
@@ -40,4 +40,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact-name: pages-artifact
+          artifact_name: pages-artifact   # Note the underscore here, not a hyphen
