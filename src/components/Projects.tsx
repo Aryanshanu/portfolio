@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, Image, Star } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
 import { useState } from "react";
 
 const Projects = () => {
@@ -9,12 +9,17 @@ const Projects = () => {
   const projects = [
     {
       title: "NSE Stock Information Visualizations",
-      description: "Created an interactive stock analysis tool leveraging NSE data for insights and trend visualizations. Features real-time data processing and interactive charts for market analysis.",
+      description: "Advanced stock market analysis platform featuring real-time data visualization, technical indicators, and predictive analytics. Built with Python and modern data science libraries for institutional-grade market insights.",
       link: "https://huggingface.co/spaces/Aryanshanu/NSE_Stock_Info_Visualizations",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200&h=800",
       github: "https://github.com/yourusername/nse-stock-viz",
-      tech: ["Python", "Streamlit", "Pandas", "Plotly"],
-      highlights: ["Real-time data processing", "Interactive visualizations", "Market trend analysis"]
+      tech: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy", "scikit-learn"],
+      highlights: [
+        "Real-time market data processing",
+        "Advanced technical analysis",
+        "Machine learning predictions",
+        "Interactive dashboards"
+      ]
     },
     {
       title: "Sentiment Analysis for Text Data",
@@ -37,9 +42,11 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50" id="projects">
+    <section className="py-16 px-4 bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/50" id="projects">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12 animate-fade-in">Key Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground animate-fade-in">
+          Key Projects
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
@@ -47,7 +54,8 @@ const Projects = () => {
               className={`
                 group hover:shadow-xl transition-all duration-300 animate-fade-in 
                 transform hover:-translate-y-2 overflow-hidden
-                ${hoveredProject === index ? 'ring-2 ring-blue-400' : ''}
+                bg-card dark:bg-card text-card-foreground dark:text-card-foreground
+                ${hoveredProject === index ? 'ring-2 ring-primary dark:ring-primary' : ''}
               `}
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -61,8 +69,8 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <CardContent className="p-6">
-                <CardTitle className="mb-2 text-xl text-blue-900">{project.title}</CardTitle>
-                <CardDescription className="mb-4 text-blue-700">{project.description}</CardDescription>
+                <CardTitle className="mb-2 text-xl text-foreground dark:text-foreground">{project.title}</CardTitle>
+                <CardDescription className="mb-4 text-muted-foreground dark:text-muted-foreground">{project.description}</CardDescription>
                 
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -70,7 +78,7 @@ const Projects = () => {
                       <Badge 
                         key={i} 
                         variant="secondary" 
-                        className="bg-blue-100 text-blue-800 animate-slide-in-right" 
+                        className="bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground animate-slide-in-right" 
                         style={{ animationDelay: `${i * 100}ms` }}
                       >
                         {tech}
@@ -82,9 +90,9 @@ const Projects = () => {
                     {project.highlights.map((highlight, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-2 text-sm text-blue-600"
+                        className="flex items-center gap-2 text-sm text-muted-foreground dark:text-muted-foreground"
                       >
-                        <Star size={16} />
+                        <Star className="h-4 w-4 text-primary dark:text-primary" />
                         <span>{highlight}</span>
                       </div>
                     ))}
@@ -96,17 +104,17 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center gap-2 text-primary dark:text-primary hover:text-primary/80 dark:hover:text-primary/80 transition-colors"
                   >
-                    <ExternalLink size={16} /> Demo
+                    <ExternalLink className="h-4 w-4" /> Demo
                   </a>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center gap-2 text-primary dark:text-primary hover:text-primary/80 dark:hover:text-primary/80 transition-colors"
                   >
-                    <Github size={16} /> Code
+                    <Github className="h-4 w-4" /> Code
                   </a>
                 </div>
               </CardContent>
