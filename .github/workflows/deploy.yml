@@ -33,18 +33,10 @@ jobs:
           npm ls
         continue-on-error: true
         
-      - name: Check directory structure
-        run: ls -la
-        
       - name: Build
-        run: |
-          echo "Starting build process..."
-          npm run build
-          echo "Build completed"
-          ls -la docs
+        run: npm run build
         env:
-          BASE_URL: '/${{ github.event.repository.name }}'
-          CI: true
+          VITE_BASE_URL: '/${{ github.event.repository.name }}'
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
