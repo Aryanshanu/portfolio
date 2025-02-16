@@ -28,12 +28,23 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm ls
+        continue-on-error: true
+        
+      - name: Check directory structure
+        run: ls -la
         
       - name: Build
-        run: npm run build
+        run: |
+          echo "Starting build process..."
+          npm run build
+          echo "Build completed"
+          ls -la docs
         env:
           BASE_URL: '/${{ github.event.repository.name }}'
+          CI: true
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

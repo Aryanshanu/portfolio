@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'docs',
     emptyOutDir: true,
+    sourcemap: true
   },
   plugins: [
     react(),
@@ -20,4 +21,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+    css: true
+  }
 }));
