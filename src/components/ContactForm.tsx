@@ -8,6 +8,10 @@ import { Mail, Send, Loader2, AlertTriangle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import emailjs from "emailjs-com";
 
+// EmailJS configuration
+// Using fixed values so the form works immediately without configuration
+emailjs.init("l3RfX8dJXQV8JwGem"); // Public key for EmailJS
+
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -32,12 +36,9 @@ const ContactForm = () => {
         to_email: "ganeshgoud0023@gmail.com"
       };
 
-      // Using EmailJS public key approach - this doesn't require hiding API keys
-      emailjs.init("public_key"); // Replace with your actual EmailJS public key
-
       const response = await emailjs.send(
-        "gmail", // Replace with your EmailJS service ID after setting up Gmail service
-        "template_contact", // Replace with your template ID
+        "service_b5xm5ec", // Service ID
+        "template_yubzjsj", // Template ID
         templateParams
       );
 
@@ -53,7 +54,7 @@ const ContactForm = () => {
       }
     } catch (error) {
       console.error('Contact form error:', error);
-      setError("Unable to send your message. Please try again later or email me directly.");
+      setError("Unable to send your message. Please try again later or email me directly at ganeshgoud0023@gmail.com");
       toast({
         title: "Error sending message",
         description: "Please try again later or contact me directly via email.",
@@ -80,23 +81,6 @@ const ContactForm = () => {
             </AlertDescription>
           </Alert>
         )}
-        
-        <Alert className="mb-6 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
-          <AlertDescription>
-            <p className="text-sm">
-              To configure this contact form with EmailJS:
-            </p>
-            <ol className="list-decimal ml-5 text-sm mt-2">
-              <li>Create an account at <a href="https://www.emailjs.com/" className="text-blue-600 dark:text-blue-400 underline" target="_blank" rel="noopener noreferrer">EmailJS</a></li>
-              <li>Add your email service (Gmail, Outlook, etc.)</li>
-              <li>Create an email template</li>
-              <li>Replace the placeholders in this code with your Public Key, Service ID, and Template ID</li>
-            </ol>
-            <p className="text-sm mt-2">
-              Or contact me directly at: <a href="mailto:ganeshgoud0023@gmail.com" className="text-blue-600 dark:text-blue-400 underline">ganeshgoud0023@gmail.com</a>
-            </p>
-          </AlertDescription>
-        </Alert>
         
         <form onSubmit={handleSubmit} className="space-y-6 mt-8">
           <div className="grid md:grid-cols-2 gap-6">
