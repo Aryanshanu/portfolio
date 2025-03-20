@@ -6,11 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Send, Loader2, AlertTriangle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import emailjs from "emailjs-com";
-
-// EmailJS configuration
-// Using fixed values so the form works immediately without configuration
-emailjs.init("l3RfX8dJXQV8JwGem"); // Public key for EmailJS
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -28,21 +23,23 @@ const ContactForm = () => {
     setError("");
     
     try {
-      // Direct email configuration 
-      const templateParams = {
-        from_name: formData.name,
-        reply_to: formData.email,
+      // Create the request data
+      const data = {
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
-        to_email: "ganeshgoud0023@gmail.com"
       };
 
-      const response = await emailjs.send(
-        "service_b5xm5ec", // Service ID
-        "template_yubzjsj", // Template ID
-        templateParams
-      );
+      // Use the Fetch API to send the form data
+      const response = await fetch("https://formspree.io/f/xdoqabnj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-      if (response.status === 200) {
+      if (response.ok) {
         toast({
           title: "Message sent successfully! 🎉",
           description: "Thank you for reaching out. I'll get back to you soon.",
