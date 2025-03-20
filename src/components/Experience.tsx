@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Calendar, Briefcase, MapPin } from "lucide-react";
@@ -7,12 +8,12 @@ const Experience = () => {
     {
       company: "Infosys",
       location: "Hyderabad, India",
-      position: "Data Engineer",
+      position: "Responsible AI Engineer",
       period: "Jan 2022 – Present",
       responsibilities: [
-        "Developed and maintained data pipelines using Apache Spark and Airflow",
-        "Implemented ML models for predictive analytics",
-        "Optimized database queries improving performance by 40%"
+        "Contribute to the development and testing of the open-source Responsible AI Toolkit, a key component of the Infosys Topaz Responsible AI Suite",
+        "Work with the AI3S framework—Scan, Shield, and Steer—to help enterprises innovate responsibly while addressing ethical challenges in AI adoption",
+        "Integrate advanced defensive measures to detect and mitigate risks such as privacy breaches, security attacks, and biased outputs, enhancing trust and transparency in AI systems"
       ]
     },
     {
