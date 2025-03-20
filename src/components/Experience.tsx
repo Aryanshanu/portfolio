@@ -9,12 +9,29 @@ const Experience = () => {
       company: "Infosys",
       location: "Hyderabad, India",
       position: "Responsible AI Engineer",
-      period: "Jan 2022 – Present",
+      period: "Jan 2025 – Present",
       responsibilities: [
         "Contribute to the development and testing of the open-source Responsible AI Toolkit, a key component of the Infosys Topaz Responsible AI Suite",
         "Work with the AI3S framework—Scan, Shield, and Steer—to help enterprises innovate responsibly while addressing ethical challenges in AI adoption",
         "Integrate advanced defensive measures to detect and mitigate risks such as privacy breaches, security attacks, and biased outputs, enhancing trust and transparency in AI systems"
       ]
+    },
+    {
+      company: "Infosys",
+      location: "Hyderabad, India",
+      position: "Data Engineer",
+      period: "Jan 2022 – December 2024",
+      responsibilities: [
+        "Analyzed large financial datasets, identifying trends and anomalies for decision-making, including relative value assessment and deal-specific return calculations",
+        "Automated data processing workflows using Python, reducing manual effort by 50% and improving accuracy by 20%",
+        "Collaborated with cross-functional teams to enhance data quality by 15%, ensuring data accuracy and completeness for financial operations and reporting",
+        "Applied machine learning concepts for data preprocessing and feature engineering for data-driven financial analysis solutions",
+        "Worked on data migration from traditional RDBMS (Netezza) to Databricks Delta Lake for data analysis and reporting",
+        "Developed and maintained high-performance data ingestion pipelines using Spark SQL",
+        "Developed workflows to extract files from Databricks to S3 using Python",
+        "Configured Airflow DAGs to automate the data processing workflows, ensuring data accuracy and reliability by maintaining cross DAG dependencies"
+      ],
+      skills: ["SQL", "Python", "Spark", "Databricks", "Airflow", "Data Analysis", "Machine Learning"]
     },
     {
       company: "24/7.1i",
@@ -72,6 +89,17 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
+                    {exp.skills && (
+                      <div className="mt-4">
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill, i) => (
+                            <Badge key={i} variant="outline" className="bg-primary/10">
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </Card>
               </div>

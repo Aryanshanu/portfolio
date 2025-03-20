@@ -54,7 +54,7 @@ const ContactForm = () => {
   return (
     <section className="py-16 px-4 bg-background dark:bg-background" id="contact">
       <div className="max-w-4xl mx-auto">
-        <h2 className="section-heading flex items-center justify-center gap-2 text-foreground dark:text-foreground">
+        <h2 className="section-heading flex items-center justify-center gap-2 text-foreground dark:text-foreground mb-8">
           <Mail className="h-6 w-6" />
           Contact Me
         </h2>
