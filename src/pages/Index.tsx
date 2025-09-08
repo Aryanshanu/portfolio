@@ -7,7 +7,7 @@ import Projects from "../components/Projects";
 import Education from "../components/Education";
 import Achievements from "../components/Achievements";
 import Navigation from "../components/Navigation";
-import ContactForm from "../components/ContactForm";
+import Contact from "../components/Contact";
 
 const Index = () => {
   return (
@@ -22,7 +22,7 @@ const Index = () => {
           <Projects />
           <Education />
           <Achievements />
-          <ContactForm />
+          <Contact />
         </main>
       </div>
     </ThemeProvider>

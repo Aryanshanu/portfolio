@@ -5,43 +5,50 @@ import { Code2, Database, Brain, Users } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "AI/ML & LLMs",
+      title: "Generative AI & LLMs",
       icon: <Brain className="w-6 h-6" />,
       skills: [
-        { name: "GPT Models", level: 90 },
-        { name: "BERT", level: 85 },
-        { name: "Transformers", level: 80 },
-        { name: "RAG", level: 85 }
+        { name: "Hugging Face", level: 95 },
+        { name: "Transformers", level: 90 },
+        { name: "OpenAI APIs", level: 85 },
+        { name: "LangChain", level: 80 },
+        { name: "RAG", level: 85 },
+        { name: "Prompt Engineering", level: 90 }
       ]
     },
     {
-      title: "Data Engineering",
+      title: "Responsible AI & Safety", 
+      icon: <Users className="w-6 h-6" />,
+      skills: [
+        { name: "Red Teaming (TAP/PAIR)", level: 90 },
+        { name: "Bias Detection", level: 85 },
+        { name: "Explainability (XAI)", level: 80 },
+        { name: "RAF Toolkit", level: 85 },
+        { name: "AI Governance", level: 80 }
+      ]
+    },
+    {
+      title: "MLOps & Deployment",
       icon: <Database className="w-6 h-6" />,
       skills: [
-        { name: "Apache Spark", level: 85 },
-        { name: "Airflow", level: 80 },
-        { name: "SQL", level: 90 },
-        { name: "Databricks", level: 85 }
+        { name: "MLflow", level: 85 },
+        { name: "Airflow", level: 90 },
+        { name: "Docker", level: 80 },
+        { name: "Kubernetes", level: 75 },
+        { name: "FastAPI", level: 80 },
+        { name: "GitHub Actions", level: 75 }
       ]
     },
     {
-      title: "Programming",
+      title: "Cloud & Programming",
       icon: <Code2 className="w-6 h-6" />,
       skills: [
         { name: "Python", level: 95 },
-        { name: "TensorFlow", level: 85 },
-        { name: "PyTorch", level: 80 },
-        { name: "FastAPI", level: 75 }
-      ]
-    },
-    {
-      title: "Soft Skills",
-      icon: <Users className="w-6 h-6" />,
-      skills: [
-        { name: "Team Leadership", level: 90 },
-        { name: "Communication", level: 85 },
-        { name: "Problem Solving", level: 90 },
-        { name: "Agile", level: 85 }
+        { name: "PyTorch", level: 85 },
+        { name: "TensorFlow", level: 80 },
+        { name: "AWS SageMaker", level: 80 },
+        { name: "Azure ML", level: 75 },
+        { name: "Databricks", level: 90 }
       ]
     }
   ];

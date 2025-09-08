@@ -11,38 +11,39 @@ const Experience = () => {
       position: "Responsible AI Engineer",
       period: "Jan 2025 – Present",
       responsibilities: [
-        "Contribute to the development and testing of the open-source Responsible AI Toolkit, a key component of the Infosys Topaz Responsible AI Suite",
-        "Work with the AI3S framework—Scan, Shield, and Steer—to help enterprises innovate responsibly while addressing ethical challenges in AI adoption",
-        "Integrate advanced defensive measures to detect and mitigate risks such as privacy breaches, security attacks, and biased outputs, enhancing trust and transparency in AI systems"
-      ]
+        "Contributed to Responsible AI Toolkit under Infosys Topaz Suite, implementing fairness, explainability, and bias mitigation modules",
+        "Led TAP/PAIR adversarial red teaming, reducing vulnerabilities by 30% across enterprise LLM deployments",
+        "Integrated AI3S (Scan, Shield, Steer) framework for ethical innovation in GenAI adoption",
+        "Built dashboards in Power BI for monitoring drift, adversarial triggers, and explainability at scale"
+      ],
+      skills: ["TAP/PAIR", "Red Teaming", "Responsible AI", "Power BI", "AI Governance", "Explainability"]
     },
     {
       company: "Infosys",
       location: "Hyderabad, India",
       position: "Data Engineer",
-      period: "Jan 2022 – December 2024",
+      period: "Jan 2022 – Dec 2024",
       responsibilities: [
-        "Analyzed large financial datasets, identifying trends and anomalies for decision-making, including relative value assessment and deal-specific return calculations",
-        "Automated data processing workflows using Python, reducing manual effort by 50% and improving accuracy by 20%",
-        "Collaborated with cross-functional teams to enhance data quality by 15%, ensuring data accuracy and completeness for financial operations and reporting",
-        "Applied machine learning concepts for data preprocessing and feature engineering for data-driven financial analysis solutions",
-        "Worked on data migration from traditional RDBMS (Netezza) to Databricks Delta Lake for data analysis and reporting",
-        "Developed and maintained high-performance data ingestion pipelines using Spark SQL",
-        "Developed workflows to extract files from Databricks to S3 using Python",
-        "Configured Airflow DAGs to automate the data processing workflows, ensuring data accuracy and reliability by maintaining cross DAG dependencies"
+        "Migrated Netezza → Databricks Delta Lake, improving scalability & reliability of reporting systems",
+        "Automated ETL workflows with Airflow DAGs, cutting manual processing by 50% and improving data quality by 20%",
+        "Developed Spark SQL pipelines and workflows for financial compliance data with 100% reliability",
+        "Built Python-based ingestion systems exporting data to AWS S3 for model training & reporting",
+        "American Family Insurance (Fortune 500) – Automated Python-based ETL pipelines, reduced manual effort 50%, boosted accuracy 20%",
+        "Northwestern Mutual (Fortune 500) – Led cloud data migration, developed Spark SQL + Airflow pipelines for financial datasets"
       ],
-      skills: ["SQL", "Python", "Spark", "Databricks", "Airflow", "Data Analysis", "Machine Learning"]
+      skills: ["SQL", "Python", "Spark", "Databricks", "Airflow", "AWS S3", "Delta Lake", "ETL"]
     },
     {
-      company: "24/7.1i",
-      location: "Hyderabad, India",
+      company: "[24]7.ai",
+      location: "Hyderabad, India", 
       position: "Research Analyst",
-      period: "August 2021 - December 2021",
+      period: "Aug 2021 – Dec 2021",
       responsibilities: [
-        "Designed conversational AI models using Dialog Flow, improving customer satisfaction by 15%",
-        "Conducted performance evaluations of AI solutions, providing actionable insights to stakeholders",
-        "Led a team of 3 researchers in developing NLP solutions"
-      ]
+        "Developed NLP chatbot models (Dialogflow), improving accuracy by 22% across 10k+ interactions",
+        "Designed SaaS-integrated APIs and training materials for conversational AI adoption",
+        "Managed a small team of 3 researchers to prototype enterprise-ready NLP solutions"
+      ],
+      skills: ["NLP", "Dialogflow", "APIs", "Team Leadership", "Conversational AI"]
     }
   ];
 
@@ -82,7 +83,7 @@ const Experience = () => {
                         <span>{exp.period}</span>
                       </div>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                       {exp.responsibilities.map((responsibility, i) => (
                         <li key={i} className="animate-slide-in-right" style={{ animationDelay: `${i * 100}ms` }}>
                           {responsibility}

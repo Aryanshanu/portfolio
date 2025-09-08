@@ -18,8 +18,12 @@ const Hero = () => {
         Ganesh Kumar
       </h1>
       <p className="text-xl md:text-2xl mb-8 text-muted-foreground animate-slide-in-right">
-        Data Engineer & AI Engineer
+        Applied AI Scientist & Responsible AI Engineer
       </p>
+      <div className="flex flex-col sm:flex-row gap-4 mb-4">
+        <span className="text-sm text-muted-foreground">📧 ganeshgoud0023@gmail.com</span>
+        <span className="text-sm text-muted-foreground">📞 +91 7995686260</span>
+      </div>
       <div className="flex gap-4 mb-8">
         <a 
           href="mailto:ganeshgoud0023@gmail.com" 
@@ -27,6 +31,17 @@ const Hero = () => {
         >
           <Mail size={20} />
           <span>Contact Me</span>
+        </a>
+      </div>
+      <div className="flex gap-6">
+        <a href="https://linkedin.com/in/ganesh-kumar" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:scale-110 transition-all duration-300">
+          <span className="font-medium">LinkedIn</span>
+        </a>
+        <a href="https://huggingface.co/ganesh-kumar" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:scale-110 transition-all duration-300">
+          <span className="font-medium">Hugging Face</span>
+        </a>
+        <a href="https://github.com/ganesh-kumar" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:scale-110 transition-all duration-300">
+          <span className="font-medium">GitHub</span>
         </a>
       </div>
     </div>

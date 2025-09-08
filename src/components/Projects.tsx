@@ -8,17 +8,77 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "NSE Stock Information Visualizations",
-      description: "Enterprise-grade financial analytics platform leveraging advanced data visualization and machine learning for real-time stock market insights. Features include technical indicator analysis, predictive modeling, and interactive dashboards for institutional investors.",
+      title: "Agentic Security Protocol",
+      description: "Advanced AI governance protocols designed for ethical deployment in enterprise environments. Implements sophisticated security measures and risk assessment frameworks to reduce AI misuse by 25% in production simulations.",
+      link: "https://github.com/ganesh-kumar/agentic-security",
+      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80&w=1200&h=800",
+      github: "https://github.com/ganesh-kumar/agentic-security",
+      tech: ["Python", "AI Governance", "Security Protocols", "Risk Assessment", "MLOps"],
+      highlights: [
+        "25% reduction in AI misuse through proactive governance",
+        "Enterprise-grade security frameworks",
+        "Real-time risk assessment and mitigation",
+        "Scalable deployment across multiple environments"
+      ],
+      features: [
+        { icon: <Brain className="w-5 h-5" />, text: "AI Ethics Framework" },
+        { icon: <Database className="w-5 h-5" />, text: "Risk Assessment Engine" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "Performance Monitoring" },
+        { icon: <LineChart className="w-5 h-5" />, text: "Analytics Dashboard" }
+      ]
+    },
+    {
+      title: "Red Teaming for LLMs (RAI Toolkit)",
+      description: "Comprehensive TAP/PAIR adversarial testing toolkit for exposing vulnerabilities in Large Language Models. Detects hallucination, bias, and prompt injection vulnerabilities across enterprise LLM deployments.",
+      link: "https://github.com/ganesh-kumar/rai-toolkit",
+      image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&q=80&w=1200&h=800",
+      github: "https://github.com/ganesh-kumar/rai-toolkit", 
+      tech: ["Python", "TAP/PAIR", "LLMs", "Transformers", "Adversarial Testing", "Responsible AI"],
+      highlights: [
+        "30% reduction in LLM vulnerabilities detected",
+        "TAP/PAIR adversarial testing implementation",
+        "Automated bias and fairness detection",
+        "Enterprise-scale deployment capabilities"
+      ],
+      features: [
+        { icon: <Brain className="w-5 h-5" />, text: "Adversarial Testing" },
+        { icon: <Database className="w-5 h-5" />, text: "Bias Detection" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "Vulnerability Assessment" },
+        { icon: <LineChart className="w-5 h-5" />, text: "Safety Metrics" }
+      ]
+    },
+    {
+      title: "Enterprise RAG System", 
+      description: "Hybrid retrieval system combining FAISS + BM25 with GPU acceleration for enterprise-grade knowledge retrieval. Features advanced error handling, security checks, and scalable deployment architecture.",
+      link: "https://github.com/ganesh-kumar/enterprise-rag",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200&h=800",
+      github: "https://github.com/ganesh-kumar/enterprise-rag",
+      tech: ["Python", "FAISS", "BM25", "GPU Acceleration", "LangChain", "Vector Search"],
+      highlights: [
+        "Hybrid FAISS + BM25 retrieval architecture",
+        "GPU-accelerated processing pipeline",
+        "Enterprise security and compliance",
+        "Sub-second query response times"
+      ],
+      features: [
+        { icon: <Database className="w-5 h-5" />, text: "Vector Search" },
+        { icon: <Brain className="w-5 h-5" />, text: "Hybrid Retrieval" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "GPU Acceleration" },
+        { icon: <LineChart className="w-5 h-5" />, text: "Performance Analytics" }
+      ]
+    },
+    {
+      title: "NSE Stock Visualization Platform",
+      description: "Enterprise-grade financial analytics platform leveraging advanced data visualization and machine learning for institutional investors. Features predictive ML models, real-time market data processing, and interactive dashboards.",
       link: "https://huggingface.co/spaces/Aryanshanu/NSE_Stock_Info_Visualizations",
       image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200&h=800",
-      github: "https://github.com/yourusername/nse-stock-viz",
+      github: "https://github.com/ganesh-kumar/nse-stock-viz",
       tech: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy", "scikit-learn"],
       highlights: [
         "Real-time market data processing with sub-second latency",
-        "Advanced technical analysis with 20+ indicators",
+        "Advanced technical analysis with 20+ indicators", 
         "ML-powered price prediction models",
-        "Interactive dashboards with drill-down capabilities"
+        "Interactive dashboards for institutional investors"
       ],
       features: [
         { icon: <LineChart className="w-5 h-5" />, text: "Real-time Technical Analysis" },
@@ -28,42 +88,43 @@ const Projects = () => {
       ]
     },
     {
-      title: "Sentiment Analysis for Text Data",
-      description: "Designed a web application for real-time sentiment analysis using pre-trained NLP models. Implements BERT-based architecture for accurate sentiment classification.",
+      title: "Sentiment Analysis App",
+      description: "Real-time sentiment classification system using fine-tuned Hugging Face models. Deployed with FastAPI backend and React frontend, featuring advanced NLP capabilities and scalable architecture.",
       link: "https://huggingface.co/spaces/Aryanshanu/Sentiment_Analysis",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80",
-      github: "https://github.com/yourusername/sentiment-analysis",
-      tech: ["PyTorch", "Transformers", "FastAPI", "React"],
-      highlights: ["BERT implementation", "Real-time analysis", "High accuracy"]
-    },
-    {
-      title: "Reinforcement Learning with PPO",
-      description: "Contributed to Hugging Face's RL environments by training and deploying PPO agents for dynamic tasks. Achieved top 1% performance in benchmark tests.",
-      link: "https://huggingface.co/Aryanshanu/ppo-Huggy",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80",
-      github: "https://github.com/yourusername/ppo-huggy",
-      tech: ["Python", "PyTorch", "Stable-Baselines3", "Gym"],
-      highlights: ["Top 1% performance", "Custom environment design", "Optimal policy convergence"]
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=1200&h=800",
+      github: "https://github.com/ganesh-kumar/sentiment-analysis",
+      tech: ["PyTorch", "Transformers", "FastAPI", "React", "Hugging Face", "Fine-tuning"],
+      highlights: [
+        "Fine-tuned BERT implementation for high accuracy",
+        "Real-time sentiment analysis pipeline",
+        "FastAPI + React deployment architecture",
+        "Scalable for enterprise workloads"
+      ],
+      features: [
+        { icon: <Brain className="w-5 h-5" />, text: "Fine-tuned Models" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "Real-time Processing" },
+        { icon: <Database className="w-5 h-5" />, text: "API Integration" },
+        { icon: <LineChart className="w-5 h-5" />, text: "Performance Metrics" }
+      ]
     }
   ];
 
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/50" id="projects">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground animate-fade-in">
-          Key Projects
-        </h2>
+        <h2 className="section-heading text-center mb-12">Key Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 
               className={`
-                group hover:shadow-xl transition-all duration-300 animate-fade-in 
-                transform hover:-translate-y-2 overflow-hidden
-                bg-card dark:bg-card text-card-foreground dark:text-card-foreground
-                border border-border dark:border-border
-                ${hoveredProject === index ? 'ring-2 ring-primary dark:ring-primary' : ''}
+                group hover:shadow-xl transition-all duration-500 animate-fade-in 
+                transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden
+                bg-card text-card-foreground border border-border
+                hover:border-primary/50 hover:shadow-primary/10
+                ${hoveredProject === index ? 'ring-2 ring-primary shadow-primary/20' : ''}
               `}
+              style={{ animationDelay: `${index * 200}ms` }}
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >

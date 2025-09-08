@@ -85,7 +85,7 @@ section {
   @apply py-12 scroll-mt-16;
 }
 
-/* Enhanced animations */
+/* Enhanced animations & interactions */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -94,8 +94,16 @@ section {
   animation: slideInRight 0.5s ease-in-out;
 }
 
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
 .animate-scale {
   animation: scale 0.3s ease-in-out;
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2s infinite;
 }
 
 .hover-scale {
@@ -104,6 +112,14 @@ section {
 
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/25;
+}
+
+.card-interactive {
+  @apply transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] cursor-pointer;
 }
 
 @keyframes fadeIn {
@@ -128,6 +144,17 @@ section {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scale {
   from {
     transform: scale(0.95);
@@ -136,6 +163,27 @@ section {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
   }
 }
 
