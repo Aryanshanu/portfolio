@@ -4,7 +4,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="section-heading">About Me</h2>
         <div className="card">
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed">
             Data Scientist with 4+ years of experience specializing in AI/ML, Generative AI, and Large
             Language Models (LLMs). Proven track record of building end-to-end AI solutions,
             fine-tuning GPT models, and deploying scalable, cloud-based AI pipelines. Skilled in working
