@@ -73,10 +73,10 @@
     @apply bg-background text-foreground;
   }
   .section-heading {
-    @apply text-3xl font-bold text-center mb-8 text-blue-900;
+    @apply text-3xl font-bold text-center mb-8 text-foreground;
   }
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60;
   }
 }
 
