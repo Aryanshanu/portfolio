@@ -4,30 +4,30 @@ import { motion } from 'framer-motion';
 // Replace these with your actual project images
 const projects = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    image: "https://via.placeholder.com/400x300",
+    title: "Agentic Security",
+    description: "Designed governance protocols for ethical AI with OpenTelemetry & OpenFGA integration, reducing misuse incidents by 25% in simulations.",
+    image: "https://via.placeholder.com/400x300?text=Agentic+Security",
     demoLink: "#",
     codeLink: "#"
   },
   {
-    title: "Project 2",
-    description: "Description of project 2",
-    image: "https://via.placeholder.com/400x300",
+    title: "Red Teaming in LLMs",
+    description: "Developed TAP/PAIR adversarial tests to expose hallucination, bias, and injection vulnerabilities in enterprise chatbots.",
+    image: "https://via.placeholder.com/400x300?text=Red+Teaming+LLMs",
     demoLink: "#",
     codeLink: "#"
   },
   {
-    title: "Project 3",
-    description: "Description of project 3",
-    image: "https://via.placeholder.com/400x300",
+    title: "Responsible AI Dashboard",
+    description: "Built a dashboard tracking risk scores, review status, and approvals for 50+ initiatives, enabling executive visibility and compliance reporting.",
+    image: "https://via.placeholder.com/400x300?text=RAI+Dashboard",
     demoLink: "#",
     codeLink: "#"
   },
   {
-    title: "Project 4",
-    description: "Description of project 4",
-    image: "https://via.placeholder.com/400x300",
+    title: "Sentiment Analysis Web App",
+    description: "Real-time text sentiment classifier using fine-tuned Hugging Face models with FastAPI backend.",
+    image: "https://via.placeholder.com/400x300?text=Sentiment+Analysis",
     demoLink: "#",
     codeLink: "#"
   }

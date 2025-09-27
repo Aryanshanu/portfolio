@@ -13,14 +13,15 @@ const Hero = () => {
       >
         <p className="text-secondary">Hi, my name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-white mt-4">
-          [Your Name]
+          GANESH KUMAR PAMUNUGULLA
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-gray-400 mt-4">
-          I'm a Full Stack Developer.
+          Applied AI Scientist
         </h2>
         <p className="text-gray-400 py-4 max-w-[700px]">
-          I'm a full-stack developer specializing in building exceptional digital experiences.
-          Currently, I'm focused on building responsive full-stack web applications.
+          Applied AI Scientist with 4+ years of experience delivering enterprise-grade Generative AI and 
+          Responsible AI solutions. Specialist in LLM evaluation, red teaming (TAP/PAIR), bias mitigation, 
+          and model alignment. Currently at Infosys, leading the Responsible AI & ML Innovation Team.
         </p>
         <div className="flex">
           <Link to="projects" smooth={true} duration={500}>

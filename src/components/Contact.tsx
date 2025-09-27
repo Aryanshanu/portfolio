@@ -57,13 +57,13 @@ const Contact = () => {
         className="flex justify-center space-x-8 mt-8"
       >
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:ganeshgoud0023@gmail.com"
           className="text-gray-300 hover:text-secondary transition-colors"
         >
           <FiMail size={30} />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/ganeshkumararyan"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-secondary transition-colors"
@@ -71,7 +71,7 @@ const Contact = () => {
           <FiGithub size={30} />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/ganeshkumararyan"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-secondary transition-colors"

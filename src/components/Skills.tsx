@@ -8,15 +8,12 @@ import { SiTypescript } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
-    { icon: <DiHtml5 size={50} />, name: 'HTML' },
-    { icon: <DiCss3 size={50} />, name: 'CSS' },
-    { icon: <DiJavascript1 size={50} />, name: 'JavaScript' },
-    { icon: <SiTypescript size={50} />, name: 'TypeScript' },
-    { icon: <DiReact size={50} />, name: 'React' },
-    { icon: <DiNodejs size={50} />, name: 'Node.js' },
-    { icon: <DiMongodb size={50} />, name: 'MongoDB' },
-    { icon: <DiPython size={50} />, name: 'Python' },
-    { icon: <DiGit size={50} />, name: 'Git' },
+    { name: 'Prompt Engineering & LLMs', items: ['GPT-3/4', 'Hugging Face', 'LangChain', 'RAG'] },
+    { name: 'Responsible AI & Safety', items: ['Red Teaming', 'Bias Detection', 'Explainable AI', 'OpenTelemetry'] },
+    { name: 'Model Development', items: ['PyTorch', 'TensorFlow', 'RLHF/DPO', 'Transformers'] },
+    { name: 'Programming', items: ['Python', 'FastAPI', 'SQL', 'REST APIs'] },
+    { name: 'Data Engineering', items: ['ETL Pipelines', 'Spark SQL', 'Databricks', 'Airflow'] },
+    { name: 'Certifications', items: ['Azure AI', 'Google Cloud', 'OpenAI', 'ISO/IEC 42001'] },
   ];
 
   return (
@@ -40,13 +37,15 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
-              className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
+              whileHover={{ scale: 1.02 }}
+              className="shadow-md shadow-[#040c16] p-4 hover:bg-[#112240] duration-500"
             >
-              <div className="mx-auto w-20 py-4">
-                {skill.icon}
-              </div>
-              <p className="my-4">{skill.name}</p>
+              <h3 className="text-xl font-bold text-secondary mb-3">{skill.name}</h3>
+              <ul className="grid grid-cols-2 gap-2">
+                {skill.items.map((item, idx) => (
+                  <li key={idx} className="text-sm">{item}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </motion.div>
